@@ -17,6 +17,7 @@
   th { background: #f0eee6; }
   code { background:#eef2ee; padding: 1px 5px; border-radius: 4px; font-size: .88em; }
   li { margin: .35em 0; }
+  ol { margin: .4em 0 .4em 0; }
   strong { color: #0c3a26; }
   em { color: var(--soft); }
   footer { margin-top: 64px; color: var(--soft); font-size: .85em; border-top: 1px solid var(--line); padding-top: 16px; }
@@ -25,8 +26,8 @@
 <body>
 <main>
 <h1>Stage 1: Ramp-up Plan — Word Blocks to Pybricks Python</h1>
-<p><strong>Window:</strong> Week of June 8 → week of September 28, 2026 (17 weeks).
-<strong>Stage 2</strong> (competition prep, ~2 sessions/week, robot game + innovation project)
+<p><strong>Window:</strong> Week of June 8 → week of September 28, 2026 (17 weeks).</p>
+<p><strong>Stage 2</strong> (competition prep, ~2 sessions/week, robot game + innovation project)
 starts the week of October 5 and is planned separately.</p>
 <h2>Team starting points</h2>
 <table>
@@ -60,9 +61,9 @@ stretch goals and a <strong>mentor role</strong> — teaching the new members is
   program during the week at home.</li>
 <li><strong>Aim-high targets</strong>: every milestone has a <em>baseline</em> (everyone hits it) and
   a <em>stretch</em> (deliberately hard). Let them chase the stretch.</li>
-<li><strong>Measure everything.</strong> From Week 5 on, the camera rig gives ground truth.
-  Numbers (cm of error, degrees of drift) turn &ldquo;the robot is being weird&rdquo; into
-  curiosity: <em>why</em> is it off, and by how much, and can we predict it?</li>
+<li><strong>Measure everything.</strong> Numbers (cm of error, degrees of drift) turn &ldquo;the
+  robot is being weird&rdquo; into curiosity: <em>why</em> is it off, and by how much, and
+  can we predict it?</li>
 <li>Kit logistics: Av &amp; Ar&rsquo;s Prime Set + Expansion Set order must be placed
   <strong>before June 30</strong> (LEGO retires SPIKE sales).</li>
 </ul>
@@ -116,13 +117,14 @@ stretch goals and a <strong>mentor role</strong> — teaching the new members is
 looks, and we can prove it with data.</em></p>
 <h3>Week 5 (Jul 6): The robot lies</h3>
 <ul>
-<li>Structured experiments, all four boys, results on one shared sheet:</li>
-<li><strong>Spin 10 × 360°</strong> using motor degrees (no gyro). Mark start heading with
-     tape. How far off is the final heading? Both directions. Why different?</li>
+<li>Structured experiments, all four boys, results on one shared sheet:<ol>
+<li><strong>Spin 10 × 360°</strong> using motor degrees (no gyro). Mark start heading
+   with tape. How far off is the final heading? Both directions. Why
+   different?</li>
 <li><strong>Forward-back × 5</strong> (1 m each way, no gyro). Where does it end up?</li>
 <li><strong>Sit still 60 s</strong> showing the gyro reading. Does it stay at 0?</li>
-<li>The camera rig makes its debut as the impartial referee (tag on the robot,
-  measured positions instead of rulers).</li>
+</ol>
+</li>
 <li><strong>Milestone:</strong> each boy can name the three error sources they saw (wheel
   slip / motor differences, accumulation over moves, gyro drift) and show a
   number for each.</li>
@@ -193,8 +195,7 @@ looks, and we can prove it with data.</em></p>
 <li>Git basics, light touch: the library lives in the shared repo; one change at
   a time.</li>
 <li><strong>Milestone:</strong> a 3-waypoint route written <em>only</em> with team library calls.</li>
-<li><strong>Stretch:</strong> route runs 8/10 times ending within 2 cm of target (camera-
-  verified).</li>
+<li><strong>Stretch:</strong> route runs 8/10 times ending within 2 cm of target.</li>
 </ul>
 <h3>Week 12 (Aug 24): Sensors beyond the gyro</h3>
 <ul>
@@ -208,7 +209,7 @@ looks, and we can prove it with data.</em></p>
 <h3>Week 13 (Aug 31): Repeatability week</h3>
 <ul>
 <li>The week of statistics: pick the 3-waypoint route; run it 10×; measure final
-  error each run (camera rig). Mean and spread — what&rsquo;s <em>systematic</em> (fix it)
+  error each run. Mean and spread — what&rsquo;s <em>systematic</em> (fix it)
   vs <em>random</em> (design margins around it).</li>
 <li>Battery experiment: same route, full vs low battery. Surprise guaranteed.</li>
 <li><strong>Milestone:</strong> a one-page &ldquo;what our robot can do&rdquo; datasheet: straight-line
