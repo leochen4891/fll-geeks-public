@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLL Team — Stage 1 Plan</title>
+<style>
+  :root { --ink:#1a2330; --soft:#5b6a7d; --accent:#0a7d4f; --bg:#fbfaf7; --card:#ffffff; --line:#e4e1d8; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:17px/1.65 "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1 { font-size: 1.9rem; line-height:1.25; border-bottom: 3px solid var(--accent); padding-bottom: 12px; }
+  h2 { font-size: 1.35rem; margin-top: 2.4em; color: var(--accent); }
+  h3 { font-size: 1.08rem; margin-top: 1.8em; }
+  table { border-collapse: collapse; width: 100%; font-size: .92em; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f0eee6; }
+  code { background:#eef2ee; padding: 1px 5px; border-radius: 4px; font-size: .88em; }
+  li { margin: .35em 0; }
+  strong { color: #0c3a26; }
+  em { color: var(--soft); }
+  footer { margin-top: 64px; color: var(--soft); font-size: .85em; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Stage 1: Ramp-up Plan — Word Blocks to Pybricks Python</h1>
+<p><strong>Window:</strong> Week of June 8 → week of September 28, 2026 (17 weeks).
+<strong>Stage 2</strong> (competition prep, ~2 sessions/week, robot game + innovation project)
+starts the week of October 5 and is planned separately.</p>
+<h2>Team starting points</h2>
+<table>
+<thead>
+<tr>
+<th>Boys</th>
+<th>Background</th>
+<th>Starting track</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Za, Sa</td>
+<td>Built robots before, know word blocks; <strong>no Python</strong> (neither native nor Pybricks)</td>
+<td>Veteran track</td>
+</tr>
+<tr>
+<td>Av, Ar</td>
+<td>New to FLL entirely</td>
+<td>New-members track</td>
+</tr>
+</tbody>
+</table>
+<p>Tracks converge at the Python migration (Week 7). Until then, veterans get
+stretch goals and a <strong>mentor role</strong> — teaching the new members is itself a goal
+(you only really know it when you can explain it).</p>
+<h2>Cadence and philosophy</h2>
+<ul>
+<li><strong>One 60-90 min session/week</strong>: review last week&rsquo;s milestone (demo, numbers on
+  the whiteboard), discuss what was hard, set next week&rsquo;s goal. Kids build and
+  program during the week at home.</li>
+<li><strong>Aim-high targets</strong>: every milestone has a <em>baseline</em> (everyone hits it) and
+  a <em>stretch</em> (deliberately hard). Let them chase the stretch.</li>
+<li><strong>Measure everything.</strong> From Week 5 on, the camera rig gives ground truth.
+  Numbers (cm of error, degrees of drift) turn &ldquo;the robot is being weird&rdquo; into
+  curiosity: <em>why</em> is it off, and by how much, and can we predict it?</li>
+<li>Kit logistics: Av &amp; Ar&rsquo;s Prime Set + Expansion Set order must be placed
+  <strong>before June 30</strong> (LEGO retires SPIKE sales).</li>
+</ul>
+<h2>Phase A — Foundations (Weeks 1-4)</h2>
+<h3>Week 1 (Jun 8): Hello robot</h3>
+<ul>
+<li><strong>New members:</strong> unbox the kit (or shared kit until theirs arrives), learn part
+  names (beams, pins, axles), build the standard SPIKE Prime <strong>Driving Base</strong>.
+  Connect the hub to the SPIKE app, run the first word-block program: drive
+  forward 50 cm and stop.</li>
+<li><strong>Veterans:</strong> rebuild/refresh their own drivebase; re-acquaint with the app.
+  Stretch: build a <em>better</em> drivebase than the standard one (lower center of
+  gravity, wheel choice) and justify the changes.</li>
+<li><strong>Milestone:</strong> every boy has a robot that drives forward on command.</li>
+</ul>
+<h3>Week 2 (Jun 15): Moving with intent</h3>
+<ul>
+<li><strong>New members:</strong> motor blocks vs movement blocks; speed/power; drive exact
+  distances (cm per wheel rotation — first taste of math), stop at a line.</li>
+<li><strong>Veterans (mentor + stretch):</strong> teach the new members the cm-per-rotation
+  calculation. Stretch: a program that drives an exact 1.0 m using <em>motor
+  degrees only</em>, no movement blocks.</li>
+<li><strong>Milestone:</strong> drive exactly 1 m and stop within a hand&rsquo;s width (±10 cm
+  new members, ±3 cm experienced members).</li>
+<li><strong>Key concept:</strong> the robot is <strong>skid-steer (tank drive)</strong>, not a car: it
+  turns by driving wheels at different speeds, and turning <em>in place</em> is
+  possible — but skidding wheels are also why dead reckoning lies.</li>
+</ul>
+<h3>Week 3 (Jun 22): Turns and the gyro</h3>
+<ul>
+<li><strong>All:</strong> the three turns — pivot (one wheel), spin (wheels opposite), arc
+  (both same direction, different speeds). When is each useful?</li>
+<li>Introduce the <strong>gyro (IMU)</strong>: what it measures (rotation rate → heading), the
+  &ldquo;turn until angle&rdquo; block vs timed/degrees turns. Have them race the two
+  approaches for a 90° turn and see which is repeatable.</li>
+<li><strong>Milestone:</strong> drive a 50 cm square and come back to the start. Baseline:
+  finish within 15 cm / 20° of start. Stretch: within 5 cm / 5°.</li>
+<li><strong>Homework experiment:</strong> run the square 5 times and <em>write down</em> the finish
+  error each time. (Seeds Week 5.)</li>
+</ul>
+<h3>Week 4 (Jun 29): Flex week (July 4th)</h3>
+<ul>
+<li>Catch-up week — families travel. Anyone behind finishes prior milestones;
+  anyone ahead does the <strong>maze challenge</strong>: navigate a taped maze on the floor
+  using only blocks written <em>before</em> pressing run (no fixing mid-run; plan,
+  run, observe, revise).</li>
+<li>Good week for Av &amp; Ar&rsquo;s kit to arrive and get inventoried.</li>
+</ul>
+<h2>Phase B — Discovering the limits (Weeks 5-6)</h2>
+<p><em>The hook for everything that follows: the robot is not as obedient as it
+looks, and we can prove it with data.</em></p>
+<h3>Week 5 (Jul 6): The robot lies</h3>
+<ul>
+<li>Structured experiments, all four boys, results on one shared sheet:</li>
+<li><strong>Spin 10 × 360°</strong> using motor degrees (no gyro). Mark start heading with
+     tape. How far off is the final heading? Both directions. Why different?</li>
+<li><strong>Forward-back × 5</strong> (1 m each way, no gyro). Where does it end up?</li>
+<li><strong>Sit still 60 s</strong> showing the gyro reading. Does it stay at 0?</li>
+<li>The camera rig makes its debut as the impartial referee (tag on the robot,
+  measured positions instead of rulers).</li>
+<li><strong>Milestone:</strong> each boy can name the three error sources they saw (wheel
+  slip / motor differences, accumulation over moves, gyro drift) and show a
+  number for each.</li>
+</ul>
+<h3>Week 6 (Jul 13): Fighting back with blocks</h3>
+<ul>
+<li>Try to <em>fix</em> the errors within word blocks: gyro-corrected turns, drive-
+  straight-with-gyro, slower approach speeds, squaring against a wall.</li>
+<li>Re-run Week 5&rsquo;s experiments with the fixes. Better? How much? What <em>can&rsquo;t</em>
+  be fixed with blocks (fine control of corrections, reusable code, real
+  feedback loops)?</li>
+<li><strong>Milestone:</strong> square drill at stretch level (≤5 cm / ≤5°) using gyro blocks.</li>
+<li><strong>The cliffhanger:</strong> &ldquo;you&rsquo;ve hit the ceiling of blocks — next week we take
+  the ceiling off.&rdquo; (Motivation for Python.)</li>
+</ul>
+<h2>Phase C — Python migration (Weeks 7-9)</h2>
+<h3>Week 7 (Jul 20): Python without the robot</h3>
+<ul>
+<li>Pure Python basics on a laptop (no hub): variables, numbers/strings, <code>if</code>,
+  <code>for</code>/<code>while</code>, functions, lists. Frame every exercise in robot terms
+  (&ldquo;a function is a my-block&rdquo;).</li>
+<li>Use any beginner-friendly environment; short daily exercises beat one long
+  session.</li>
+<li><strong>Milestone:</strong> each boy writes a function <code>square_path(side_cm)</code> that <em>prints</em>
+  the moves it would make (drive 50, turn 90, &hellip;) — the robot version comes later.</li>
+<li><strong>Veterans note:</strong> they&rsquo;re no longer ahead here — everyone starts Python at
+  zero. Reset the stretch dynamic accordingly.</li>
+</ul>
+<h3>Week 8 (Jul 27): Pybricks on the hub</h3>
+<ul>
+<li>Install <strong>Pybricks firmware</strong> on the hubs (code.pybricks.com; firmware swap is
+  reversible back to LEGO firmware anytime, settable in minutes).</li>
+<li>First programs: beep, light matrix, single motor <code>run_angle</code>, read the IMU
+  heading and print it live.</li>
+<li>Tour of the docs (docs.pybricks.com) — teach them to look things up.</li>
+<li><strong>Milestone:</strong> a Pybricks program that drives the Week 2 &ldquo;exact 1 m&rdquo; task.</li>
+<li><strong>Stretch:</strong> beat their own word-block accuracy on the first try.</li>
+</ul>
+<h3>Week 9 (Aug 3): DriveBase — the real unlock</h3>
+<ul>
+<li>The <code>DriveBase</code> class: declare wheel diameter and axle track, then
+  <code>straight(1000)</code>, <code>turn(90)</code>. Then the magic switch: <code>use_gyro(True)</code> —
+  closed-loop heading control.</li>
+<li>Re-run the Week 5 experiments in Python with gyro on. Compare all three
+  datasets: blocks open-loop vs blocks gyro vs Pybricks gyro.</li>
+<li><strong>Milestone:</strong> 1 m straight within ±0.5 cm; 90° turn within ±1°, demonstrated
+  5 times in a row (±1 cm over 1 m is too easy once the gyro loop is on — aim
+  tighter).</li>
+<li><strong>Stretch:</strong> 2 m straight within ±1 cm, and 10 consecutive in-spec runs —
+  watch how error grows (or doesn&rsquo;t) with distance.</li>
+<li><strong>Season note:</strong> the new FLL season&rsquo;s challenge typically releases early
+  August — watch for the 2026-27 Founders Edition announcement and register.</li>
+</ul>
+<h2>Phase D — Precision engineering (Weeks 10-13)</h2>
+<h3>Week 10 (Aug 10): Calibration</h3>
+<ul>
+<li>Wheel diameter and axle track are <em>lies until measured</em>: calibrate them
+  (drive a long known distance, spin 10 × 360°, correct the constants).</li>
+<li><code>DriveBase.settings()</code>: speed, acceleration — how acceleration affects
+  overshoot and wheel slip.</li>
+<li><strong>Milestone:</strong> a written calibration profile per robot (the numbers, the date,
+  the battery level) and the test that produced it.</li>
+</ul>
+<h3>Week 11 (Aug 17): The team library</h3>
+<ul>
+<li>Turn working code into a shared module: <code>move_straight()</code>, <code>turn_to_heading()</code>
+  (absolute heading, not relative — discuss why), <code>arc()</code>, <code>wait_for_button()</code>.</li>
+<li>Git basics, light touch: the library lives in the shared repo; one change at
+  a time.</li>
+<li><strong>Milestone:</strong> a 3-waypoint route written <em>only</em> with team library calls.</li>
+<li><strong>Stretch:</strong> route runs 8/10 times ending within 2 cm of target (camera-
+  verified).</li>
+</ul>
+<h3>Week 12 (Aug 24): Sensors beyond the gyro</h3>
+<ul>
+<li>Color sensor: stop on a line, follow a line (simple two-state, then
+  proportional — their first real feedback controller, and the concept
+  transfers to everything).</li>
+<li>Force/distance sensor uses: wall squaring, touch-triggered start.</li>
+<li><strong>Milestone:</strong> line follow around a curve + stop on a cross-line.</li>
+<li><strong>Stretch:</strong> proportional follower visibly smoother than the two-state one.</li>
+</ul>
+<h3>Week 13 (Aug 31): Repeatability week</h3>
+<ul>
+<li>The week of statistics: pick the 3-waypoint route; run it 10×; measure final
+  error each run (camera rig). Mean and spread — what&rsquo;s <em>systematic</em> (fix it)
+  vs <em>random</em> (design margins around it).</li>
+<li>Battery experiment: same route, full vs low battery. Surprise guaranteed.</li>
+<li><strong>Milestone:</strong> a one-page &ldquo;what our robot can do&rdquo; datasheet: straight-line
+  accuracy, turn accuracy, route repeatability, battery sensitivity.</li>
+</ul>
+<h2>Phase E — Applied missions (Weeks 14-17)</h2>
+<h3>Week 14 (Sep 7): Attachments and missions</h3>
+<ul>
+<li>Build 2-3 mission-style props (lever to flip, object to push/collect, target
+  zone) on a practice table — use the real season mat if released.</li>
+<li>Attachment design: passive vs motor-driven; quick-swap mounts (expansion set
+  parts shine here).</li>
+<li><strong>Milestone:</strong> one mission solved reliably: launch, do the task, return.</li>
+</ul>
+<h3>Week 15 (Sep 14): The launcher and multi-mission runs</h3>
+<ul>
+<li>Master program / mission launcher in Pybricks (hub buttons select missions —
+  standard FLL pattern). Launch discipline: aligned start position using a jig.</li>
+<li><strong>Milestone:</strong> two missions back-to-back from one launch zone, hands-free.</li>
+<li><strong>Stretch:</strong> three missions under 2:30 (robot-game time).</li>
+</ul>
+<h3>Week 16 (Sep 21): Mock mini-competition</h3>
+<ul>
+<li>Full dress rehearsal: 2:30 matches, two boys at the table per run (FLL rule),
+  scored runs, three rounds. Parents invited as audience.</li>
+<li>Debrief like a real team: what failed, why, what&rsquo;s the fix.</li>
+<li><strong>Milestone:</strong> a completed scored match + a written fix list.</li>
+</ul>
+<h3>Week 17 (Sep 28): Capstone and handoff to Stage 2</h3>
+<ul>
+<li>Retrospective: each boy demos the thing he&rsquo;s proudest of, and we revisit the
+  Week 5 data — show them how far the accuracy came (blocks open-loop → tuned
+  Pybricks). That arc <em>is</em> the curriculum.</li>
+<li>Plan Stage 2 together: season missions analysis, innovation project topic
+  brainstorm (it needs real time — start the topic hunt now), new cadence
+  (2×/week from October).</li>
+<li><strong>Milestone:</strong> Stage 2 kickoff scheduled; roles and first mission assignments
+  drafted.</li>
+</ul>
+<h2>Standing notes</h2>
+<ul>
+<li><strong>Pybricks legality:</strong> community consensus is that FLL constrains hardware,
+  not programming environment, and many FLL teams compete on Pybricks — but
+  verify against the official 2026-27 robot game rules when they release.</li>
+<li><strong>Two kits, four boys:</strong> pair-program deliberately; rotate who drives the
+  laptop vs the robot. The mentor pairing (experienced + new member) through Phase B.</li>
+<li><strong>Session structure that works:</strong> 10 min demo of last week&rsquo;s milestone →
+  20-30 min new concept (hands-on, minimal lecturing) → set next week&rsquo;s goal,
+  baseline and stretch, written down where everyone sees it.</li>
+<li><strong>If a week slips</strong>, slip the whole plan rather than skipping a phase —
+  Phase B (limits) and Week 13 (repeatability) are the spine of the curiosity
+  arc; don&rsquo;t cut them.</li>
+</ul>
+<footer>FLL team shared plan — June 2026. Source: <a href="https://github.com/leochen4891/fll-geeks-public">fll-geeks-public</a></footer>
+</main>
+</body>
+</html>
