@@ -84,8 +84,8 @@ stretch goals and a <strong>mentor role</strong> — teaching the new members is
 <li><strong>New members:</strong> motor blocks vs movement blocks; speed/power; drive exact
   distances (cm per wheel rotation — first taste of math), stop at a line.</li>
 <li><strong>Veterans (mentor + stretch):</strong> teach the new members the cm-per-rotation
-  calculation. Stretch: a program that drives an exact 1.0 m using <em>motor
-  degrees only</em>, no movement blocks.</li>
+  calculation. Stretch: predict where the robot will stop to within 1 cm
+  <em>before</em> pressing run. Hint: wheel circumference is all the math you need.</li>
 <li><strong>Milestone:</strong> drive exactly 1 m and stop within a hand&rsquo;s width (±10 cm
   new members, ±3 cm experienced members).</li>
 <li><strong>Key concept:</strong> the robot is <strong>skid-steer (tank drive)</strong>, not a car: it
@@ -107,9 +107,9 @@ stretch goals and a <strong>mentor role</strong> — teaching the new members is
 <h3>Week 4 (Jun 29): Flex week (July 4th)</h3>
 <ul>
 <li>Catch-up week — families travel. Anyone behind finishes prior milestones;
-  anyone ahead does the <strong>maze challenge</strong>: navigate a taped maze on the floor
-  using only blocks written <em>before</em> pressing run (no fixing mid-run; plan,
-  run, observe, revise).</li>
+  anyone ahead does the <strong>maze challenge</strong>: navigate a taped maze on the
+  floor. Stretch: succeed on the first attempt. Hint: walking the path and
+  sketching the moves before coding saves a lot of attempts.</li>
 <li>Good week for Av &amp; Ar&rsquo;s kit to arrive and get inventoried.</li>
 </ul>
 <h2>Phase B — Discovering the limits (Weeks 5-6)</h2>
@@ -118,10 +118,10 @@ looks, and we can prove it with data.</em></p>
 <h3>Week 5 (Jul 6): The robot lies</h3>
 <ul>
 <li>Structured experiments, all four boys, results on one shared sheet:<ol>
-<li><strong>Spin 10 × 360°</strong> using motor degrees (no gyro). Mark start heading
-   with tape. How far off is the final heading? Both directions. Why
-   different?</li>
-<li><strong>Forward-back × 5</strong> (1 m each way, no gyro). Where does it end up?</li>
+<li><strong>Spin 10 × 360°</strong> using motor degrees, gyro off — the point is to
+   measure what the motors alone do. Mark start heading with tape. How far
+   off is the final heading? Both directions. Why different?</li>
+<li><strong>Forward-back × 5</strong> (1 m each way, gyro off). Where does it end up?</li>
 <li><strong>Sit still 60 s</strong> showing the gyro reading. Does it stay at 0?</li>
 </ol>
 </li>
@@ -194,7 +194,8 @@ looks, and we can prove it with data.</em></p>
   (absolute heading, not relative — discuss why), <code>arc()</code>, <code>wait_for_button()</code>.</li>
 <li>Git basics, light touch: the library lives in the shared repo; one change at
   a time.</li>
-<li><strong>Milestone:</strong> a 3-waypoint route written <em>only</em> with team library calls.</li>
+<li><strong>Milestone:</strong> a 3-waypoint route. Hint: if the team library is good, the
+  route program is just a handful of calls — that&rsquo;s the test of the library.</li>
 <li><strong>Stretch:</strong> route runs 8/10 times ending within 2 cm of target.</li>
 </ul>
 <h3>Week 12 (Aug 24): Sensors beyond the gyro</h3>

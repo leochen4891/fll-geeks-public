@@ -45,8 +45,8 @@ stretch goals and a **mentor role** — teaching the new members is itself a goa
 - **New members:** motor blocks vs movement blocks; speed/power; drive exact
   distances (cm per wheel rotation — first taste of math), stop at a line.
 - **Veterans (mentor + stretch):** teach the new members the cm-per-rotation
-  calculation. Stretch: a program that drives an exact 1.0 m using *motor
-  degrees only*, no movement blocks.
+  calculation. Stretch: predict where the robot will stop to within 1 cm
+  *before* pressing run. Hint: wheel circumference is all the math you need.
 - **Milestone:** drive exactly 1 m and stop within a hand's width (±10 cm
   new members, ±3 cm experienced members).
 - **Key concept:** the robot is **skid-steer (tank drive)**, not a car: it
@@ -66,9 +66,9 @@ stretch goals and a **mentor role** — teaching the new members is itself a goa
 
 ### Week 4 (Jun 29): Flex week (July 4th)
 - Catch-up week — families travel. Anyone behind finishes prior milestones;
-  anyone ahead does the **maze challenge**: navigate a taped maze on the floor
-  using only blocks written *before* pressing run (no fixing mid-run; plan,
-  run, observe, revise).
+  anyone ahead does the **maze challenge**: navigate a taped maze on the
+  floor. Stretch: succeed on the first attempt. Hint: walking the path and
+  sketching the moves before coding saves a lot of attempts.
 - Good week for Av & Ar's kit to arrive and get inventoried.
 
 ## Phase B — Discovering the limits (Weeks 5-6)
@@ -78,10 +78,10 @@ looks, and we can prove it with data.*
 
 ### Week 5 (Jul 6): The robot lies
 - Structured experiments, all four boys, results on one shared sheet:
-    1. **Spin 10 × 360°** using motor degrees (no gyro). Mark start heading
-       with tape. How far off is the final heading? Both directions. Why
-       different?
-    2. **Forward-back × 5** (1 m each way, no gyro). Where does it end up?
+    1. **Spin 10 × 360°** using motor degrees, gyro off — the point is to
+       measure what the motors alone do. Mark start heading with tape. How far
+       off is the final heading? Both directions. Why different?
+    2. **Forward-back × 5** (1 m each way, gyro off). Where does it end up?
     3. **Sit still 60 s** showing the gyro reading. Does it stay at 0?
 - **Milestone:** each boy can name the three error sources they saw (wheel
   slip / motor differences, accumulation over moves, gyro drift) and show a
@@ -148,7 +148,8 @@ looks, and we can prove it with data.*
   (absolute heading, not relative — discuss why), `arc()`, `wait_for_button()`.
 - Git basics, light touch: the library lives in the shared repo; one change at
   a time.
-- **Milestone:** a 3-waypoint route written *only* with team library calls.
+- **Milestone:** a 3-waypoint route. Hint: if the team library is good, the
+  route program is just a handful of calls — that's the test of the library.
 - **Stretch:** route runs 8/10 times ending within 2 cm of target.
 
 ### Week 12 (Aug 24): Sensors beyond the gyro
