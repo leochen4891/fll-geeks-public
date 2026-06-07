@@ -2,9 +2,6 @@
 
 **Window:** Week of June 8 → week of September 28, 2026 (17 weeks).
 
-**Stage 2** (competition prep, ~2 sessions/week, robot game + innovation project)
-starts the week of October 5 and is planned separately.
-
 ## Team starting points
 
 | Boys | Background | Starting track |
