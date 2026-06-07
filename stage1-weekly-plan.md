@@ -29,14 +29,15 @@ stretch goals and a **mentor role** — teaching the new members is itself a goa
 ## The accuracy roadmap
 
 The whole arc in one picture: week over week, the error we tolerate shrinks,
-in driving and in turning. The chart is deliberately conceptual, no exact
-numbers: real thresholds come from the team's own testing, and each week's
-target gets set at the session from the previous week's measurements. (From
-experience, well-tuned word blocks already reach low-centimeter accuracy; the
-Python/Pybricks payoff shows up at the sub-centimeter level and in how
-repeatably and maintainably you get there.) This accuracy is the foundation
-for solving missions later: a robot that can't return to the same spot can't
-reliably work a mission model across the table.
+in driving and in turning. The chart is deliberately conceptual, with no
+numbers: real targets come from the team's own testing, and each week's goal
+gets set at the session from the previous week's measurements — putting an
+exact number on the plan up front would only mislead. (From experience,
+well-tuned word blocks already get you surprisingly accurate; the Python and
+Pybricks payoff is finer precision still, and just as much how *repeatably* and
+*maintainably* you get there.) This accuracy is the foundation for solving
+missions later: a robot that can't return to the same spot can't reliably work
+a mission model across the table.
 
 ![Accuracy roadmap: error decreasing week over week across the 17 weeks (conceptual, no scale)](accuracy-roadmap.svg)
 
@@ -46,20 +47,21 @@ reliably work a mission model across the table.
 - **New members:** unbox the kit (or shared kit until theirs arrives), learn part
   names (beams, pins, axles), build the standard SPIKE Prime **Driving Base**.
   Connect the hub to the SPIKE app, run the first word-block program: drive
-  forward 50 cm and stop.
+  forward and stop on command.
 - **Veterans:** rebuild/refresh their own drivebase; re-acquaint with the app.
   Stretch: build a *better* drivebase than the standard one (lower center of
   gravity, wheel choice) and justify the changes.
 - **Milestone:** every boy has a robot that drives forward on command.
 
 ### Week 2 (Jun 15): Moving with intent
-- **New members:** motor blocks vs movement blocks; speed/power; drive exact
-  distances (cm per wheel rotation — first taste of math), stop at a line.
+- **New members:** motor blocks vs movement blocks; speed/power; drive a chosen
+  distance (cm per wheel rotation — first taste of math), stop at a line.
 - **Veterans (mentor + stretch):** teach the new members the cm-per-rotation
-  calculation. Stretch: predict where the robot will stop to within 1 cm
-  *before* pressing run. Hint: wheel circumference is all the math you need.
-- **Milestone:** drive exactly 1 m and stop within a hand's width (±10 cm
-  new members, ±3 cm experienced members).
+  calculation. Stretch: predict where the robot will stop *before* pressing run,
+  and land close to the prediction. Hint: wheel circumference is all the math you
+  need.
+- **Milestone:** drive a set distance and stop on a target line. Experienced
+  members aim for a tighter margin than new members.
 - **Key concept:** the robot is **skid-steer (tank drive)**, not a car: it
   turns by driving wheels at different speeds, and turning *in place* is
   possible — but skidding wheels are also why dead reckoning lies.
@@ -69,9 +71,10 @@ reliably work a mission model across the table.
   (both same direction, different speeds). When is each useful?
 - Introduce the **gyro (IMU)**: what it measures (rotation rate → heading), the
   "turn until angle" block vs timed/degrees turns. Have them race the two
-  approaches for a 90° turn and see which is repeatable.
-- **Milestone:** drive a 50 cm square and come back to the start. Baseline:
-  finish within 15 cm / 20° of start. Stretch: within 5 cm / 5°.
+  approaches for the same quarter-turn and see which is repeatable.
+- **Milestone:** drive a square and come back to the start. Baseline: land in
+  the neighborhood of the start. Stretch: land nearly on the spot, facing the
+  original heading.
 - **Homework experiment:** run the square 5 times and *write down* the finish
   error each time. (Seeds Week 5.)
 
@@ -104,7 +107,8 @@ looks, and we can prove it with data.*
 - Re-run Week 5's experiments with the fixes. Better? How much? What *can't*
   be fixed with blocks (fine control of corrections, reusable code, real
   feedback loops)?
-- **Milestone:** square drill at stretch level (≤5 cm / ≤5°) using gyro blocks.
+- **Milestone:** square drill noticeably tighter than Week 3, using gyro blocks
+  — and able to say *why* it improved.
 - **The cliffhanger:** "you've hit the ceiling of blocks — next week we take
   the ceiling off." (Motivation for Python.)
 
@@ -127,7 +131,7 @@ looks, and we can prove it with data.*
 - First programs: beep, light matrix, single motor `run_angle`, read the IMU
   heading and print it live.
 - Tour of the docs (docs.pybricks.com) — teach them to look things up.
-- **Milestone:** a Pybricks program that drives the Week 2 "exact 1 m" task.
+- **Milestone:** a Pybricks program that drives the Week 2 set-distance task.
 - **Stretch:** beat their own word-block accuracy on the first try.
 
 ### Week 9 (Aug 3): DriveBase — the real unlock
@@ -136,11 +140,10 @@ looks, and we can prove it with data.*
   closed-loop heading control.
 - Re-run the Week 5 experiments in Python with gyro on. Compare all three
   datasets: blocks open-loop vs blocks gyro vs Pybricks gyro.
-- **Milestone:** 1 m straight within ±0.5 cm; 90° turn within ±1°, demonstrated
-  5 times in a row (±1 cm over 1 m is too easy once the gyro loop is on — aim
-  tighter).
-- **Stretch:** 2 m straight within ±1 cm, and 10 consecutive in-spec runs —
-  watch how error grows (or doesn't) with distance.
+- **Milestone:** straight-line and turn accuracy clearly better than the best
+  word-block result, and repeatable several runs in a row.
+- **Stretch:** hold that accuracy over longer straight runs and many consecutive
+  in-spec runs — watch whether error grows with distance.
 - **Season note:** the new FLL season's challenge typically releases early
   August — watch for the 2026-27 Founders Edition announcement and register.
 
@@ -161,7 +164,7 @@ looks, and we can prove it with data.*
   a time.
 - **Milestone:** a 3-waypoint route. Hint: if the team library is good, the
   route program is just a handful of calls — that's the test of the library.
-- **Stretch:** route runs 8/10 times ending within 2 cm of target.
+- **Stretch:** route repeats reliably, ending close to the target on most runs.
 
 ### Week 12 (Aug 24): Sensors beyond the gyro
 - Color sensor: stop on a line, follow a line (simple two-state, then
@@ -209,6 +212,33 @@ looks, and we can prove it with data.*
   (2×/week from October).
 - **Milestone:** Stage 2 kickoff scheduled; roles and first mission assignments
   drafted.
+
+## Resources (existing tutorials we lean on)
+
+No single free course runs *word blocks → Pybricks → FLL accuracy* end to end,
+but two cover most of it and only need light glue:
+
+- **Pybricks "Learn robotics and coding"** — https://pybricks.com/learn/ — a
+  13-chapter path that starts in Pybricks *blocks* and moves to text Python,
+  ending with a dedicated **gyro navigation + calibration** chapter. Closest
+  single spine to this plan.
+- **Pybricks `robotics` / DriveBase docs** — https://docs.pybricks.com/en/latest/robotics.html
+  — the authoritative reference for wheel diameter, axle track, the `straight()`
+  / `turn()` calibration procedures, and `use_gyro(True)`.
+- **PRIME LESSONS — Python lessons** — https://primelessons.org/en/PyLessons.html
+  — a complete FLL-framed blocks-to-Python curriculum (Moving Straight, Turning
+  with Gyro, proportional line follower). Targets the **official SPIKE App
+  Python**, not Pybricks — handy reference, different API.
+- **LEGO Education "Competition Ready"** — https://education.lego.com/en-us/lessons/prime-competition-ready/
+  — official block-based driving-base + missions lessons; the on-ramp before
+  Python.
+- **Builderdude35 SPIKE Python videos** — https://builderdude35.com/ — video
+  walkthroughs for kids who learn by watching (official SPIKE App Python).
+
+Coach note: pick **one** Python target. PRIME LESSONS / Builderdude35 / LEGO
+teach the SPIKE App Python; our accuracy spine (DriveBase, `use_gyro`,
+calibration) lives in **Pybricks**. We use Pybricks for the precision work and
+treat the others as concept references.
 
 ## Standing notes
 
