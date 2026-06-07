@@ -26,6 +26,17 @@ stretch goals and a **mentor role** — teaching the new members is itself a goa
 - Kit logistics: Av & Ar's Prime Set + Expansion Set order must be placed
   **before June 30** (LEGO retires SPIKE sales).
 
+## The accuracy roadmap
+
+The whole arc in one picture: every few weeks the tolerance target steps down,
+movement from ±10-15 cm to ±0.5 cm, turning from ±20° to ±1°, a 20× improvement
+by Week 9. Each step happens *because* a new tool was earned (gyro blocks, then
+Pybricks closed-loop control). This accuracy is the foundation for solving
+missions later: a robot that can't hit ±2 cm can't reliably touch a mission
+model across the table.
+
+![Accuracy roadmap: movement and turning tolerance targets stepping down across the 17 weeks](accuracy-roadmap.svg)
+
 ## Phase A — Foundations (Weeks 1-4)
 
 ### Week 1 (Jun 8): Hello robot
