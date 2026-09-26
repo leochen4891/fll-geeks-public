@@ -1,0 +1,4 @@
+# GitHub Pages: keep the Stage 1 plan in the repo but off the public site.
+exclude:
+  - stage1-weekly-plan.md
+  - accuracy-roadmap.svg
