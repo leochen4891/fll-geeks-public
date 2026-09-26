@@ -3,6 +3,10 @@
 Shared resources for our FIRST LEGO League (FLL) team families: guides, links,
 build notes, and practice materials.
 
+## Weekly homework
+
+- [All homework](homework/) · latest: [Week of Sept 28, 2026](homework/2026-09-28/)
+
 ## Useful links
 
 - [SPIKE Prime Set (45678)](https://education.lego.com/en-us/products/lego-education-spike-prime-set/45678)
