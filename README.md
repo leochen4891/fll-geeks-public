@@ -5,7 +5,7 @@ build notes, and practice materials.
 
 ## Weekly homework
 
-- [All homework](homework/) · latest: [Week of Sept 28, 2026](homework/2026-09-28/)
+- [All homework](https://leochen4891.github.io/fll-geeks-public/) · latest: [Week of Sept 28, 2026](homework/2026-09-28/)
 
 ## Useful links
 
