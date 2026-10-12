@@ -14,6 +14,7 @@
   table { border-collapse: collapse; width: 100%; font-size: .92em; }
   th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
   th { background: #f0eee6; }
+  td:first-child { white-space: nowrap; }
   img { max-width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px; box-sizing: border-box; }
   li { margin: .35em 0; }
   strong { color: #0c3a26; }
@@ -33,6 +34,25 @@
 <p class="nav"><a href="../">← All homeworks</a></p>
 <h1>Homework — Week of October 12, 2026</h1>
 <p><strong>Due:</strong> Friday, October 16 robotics meeting — be ready to run your mission.</p>
+
+<h2>How to get unstuck</h2>
+<p>When a mission doesn't work, running the same code again and again and hoping it works won't
+fix it. Engineers use a loop instead:</p>
+<div class="rule">
+  <p><strong>The stuck rule:</strong> if the same code fails twice, stop running it. Go back to
+  <strong>Observation</strong> and work through the loop.</p>
+</div>
+<table>
+  <tr><th>Step</th><th>What it means</th><th>Example on the field</th></tr>
+  <tr><td><strong>1. Observation</strong></td><td>Watch closely what the robot actually does, and write it down.</td><td>&ldquo;It stops about 3 cm short of the lever, 2 runs out of 5.&rdquo;</td></tr>
+  <tr><td><strong>2. Question</strong></td><td>Ask why it happens.</td><td>Why does it stop short only sometimes?</td></tr>
+  <tr><td><strong>3. Hypothesis</strong></td><td>Make a guess you can test.</td><td>&ldquo;My starting position changes a little each time.&rdquo; Other guesses: wheel slip, low battery, gyro not reset.</td></tr>
+  <tr><td><strong>4. Experiment</strong></td><td>Change <strong>one thing only</strong>, then run it a few times.</td><td>Line the robot up against the wall at the start, then run 3 times.</td></tr>
+  <tr><td><strong>5. Analysis</strong></td><td>Look at the results. Did it get better, worse, or stay the same?</td><td>&ldquo;3 out of 3 now reach the lever.&rdquo;</td></tr>
+  <tr><td><strong>6. Conclusion</strong></td><td>Keep the change, or go back with a new hypothesis.</td><td>Keep the wall alignment and move on to the next part of the mission.</td></tr>
+</table>
+<p><em>Tip:</em> keep a simple run log (run #, what I changed, result) so you can see what actually helped.</p>
+<p><strong>Learn more:</strong> <a href="https://yes.mos.org/impact/engineering-design-process">The Engineering Design Process</a> <em>— Engineering is Elementary, Museum of Science, Boston</em></p>
 
 <h2>Last meeting summary (October 9)</h2>
 <div class="rule">
